@@ -1,0 +1,131 @@
+:root {
+    --bg-dark: #0b0e14;
+    --bg-card: #161b22;
+    --bg-variant: #0d1117;
+    --accent-cyan: #00f2ff;
+    --text-main: #e6edf3;
+    --text-muted: #9198a1;
+}
+
+/* --- Base --- */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, .navbar-brand, .badge, .card-title {
+    font-family: 'Fira Code', monospace;
+}
+
+.bg-dark-variant {
+    background-color: var(--bg-variant);
+}
+
+/* --- Navegación --- */
+.navbar {
+    background-color: rgba(11, 14, 20, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(48, 54, 61, 0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(230, 237, 243, 0.85);
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--accent-cyan);
+}
+
+/* --- Secciones y Hero --- */
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(rgba(11, 14, 20, 0.85), rgba(11, 14, 20, 0.85)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--accent-cyan);
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-cyan);
+}
+
+/* --- Tipografía y Utilidades --- */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-cyan-muted {
+    color: rgba(0, 242, 255, 0.6) !important;
+}
+
+/* --- Componentes: Tarjetas --- */
+.card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-cyan);
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: var(--accent-cyan);
+}
+
+.card-subtitle {
+    color: var(--accent-cyan) !important;
+    opacity: 0.8;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.card-text {
+    color: var(--text-main) !important;
+    opacity: 0.9;
+}
+
+.cert-card:hover {
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+/* --- Componentes: UI Elements --- */
+.badge {
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+.badge:hover {
+    background-color: transparent !important;
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan) !important;
+}
+
+.btn-outline-info {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+}
+
+.btn-outline-info:hover {
+    background-color: var(--accent-cyan);
+    color: #000;
+}
